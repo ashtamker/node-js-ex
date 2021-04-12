@@ -12,5 +12,5 @@ const list = () => {
     const files = fs.readdirSync('./');
     console.log(files);
 }
-
+ 
 list();
