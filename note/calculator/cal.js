@@ -30,7 +30,7 @@
 const summation = (a, b) =>  a + b;
 const subtraction = (a, b) =>  a - b;
 const multiply = (a, b) => a * b;
-const division = (a, b) =>  a / b;
+const power = (a) =>  a * a;
 
 const yargs = require("yargs");
 
@@ -49,8 +49,8 @@ else if (action === "sub") {
 else if (action === "multi") {
     result = multiply(a, b);
 }
-else if (action === "div") {
-    result = division(a, b);
+else if (action === "pow") {
+    result = power(a);
 }
 
  
