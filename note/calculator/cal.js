@@ -34,8 +34,6 @@ const division = (a, b) =>  a / b;
 
 const yargs = require("yargs");
 
- 
- 
 const action = process.argv[2];
 const a = yargs.argv.a;
 const b = yargs.argv.b;
