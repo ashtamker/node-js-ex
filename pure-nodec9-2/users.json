@@ -1,0 +1,21 @@
+{
+    "users": [
+      {
+        "id": 0,
+        "name": "Or",
+        "capsule": 3
+      },
+      {
+        "id": 1,
+        "name": "Sergey",
+        "capsule": 4
+      },
+      {
+        "id": 2,
+        "name": "Dima",
+        "capsule": 4
+    }
+  ]
+    
+  }
+  
