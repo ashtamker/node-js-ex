@@ -8,17 +8,17 @@
       {
         "id": 1,
         "name": "Toni Kroos",
-        "isActive": false
+        "isActive": true
       },
       {
         "id": 2,
         "name": "Federico Valverde",
-        "isActive": false
+        "isActive": true
     },
     {
         "id": 3,
         "name": "Luka Modric",
-        "isActive": false
+        "isActive": true
     }
   ]
     
