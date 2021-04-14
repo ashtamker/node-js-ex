@@ -1,0 +1,25 @@
+{
+    "workers": [
+      {
+        "id": 0,
+        "name": "Sergio Ramos",
+        "isActive": false
+      },
+      {
+        "id": 1,
+        "name": "Toni Kroos",
+        "isActive": false
+      },
+      {
+        "id": 2,
+        "name": "Federico Valverde",
+        "isActive": false
+    },
+    {
+        "id": 3,
+        "name": "Luka Modric",
+        "isActive": false
+    }
+  ]
+    
+  }
