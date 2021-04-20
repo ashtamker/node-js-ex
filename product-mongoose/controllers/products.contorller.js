@@ -3,14 +3,14 @@ const productModel = require('../models/product.model');
 
 const createProduct = (req, res) => {
     // const data = req.body;
-    const {productName, productCategory, details} = req.body;
+    const {productName, productCategory, description, price} = req.body;
     const product = new productModel({
         productName: productName,
         productCategory: productCategory,
         details: {
             description: description,
             price: price,
-            
+
         }
         
     });

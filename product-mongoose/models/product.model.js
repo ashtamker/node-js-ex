@@ -41,9 +41,3 @@ const roommodel  = mongoose.model('product',productSchema);
 module.exports= roommodel;
 // module.exports = mongoose.model('rooms',roomSchema);
 
-
-
-// type: Date,
-// required: false,
-// unique: false,
-// default : Date.now()
