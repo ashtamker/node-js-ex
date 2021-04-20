@@ -30,7 +30,8 @@ router.get('/',(req,res)=>{
 }).get('/:id',(req,res)=>{
     return res.status(200)({worker : worker.map(id => worker[id])})
 }).post('/',(req,res)=>{
-    if(!req.body.name){
+    if(!req.body.name)
+    {
         return res.status(204).json({error: 'enter name'})
     }
     // let res = worker.find((i) => {
