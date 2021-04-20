@@ -4,9 +4,9 @@ const productsControler = require('../controllers/products.contorller');
 
 
 router.get('/',(req,res)=>{
-   roomControler.getAll(req,res);
+   productsControler.getAll(req,res);
 }).post('/',(req,res)=>{
-   roomControler.create(req,res);
+   productsControler.create(req,res);
 })
 
 module.exports = router;
