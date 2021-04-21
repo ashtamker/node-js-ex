@@ -8,5 +8,7 @@ router.get('/',(req,res)=>{
 }).post('/',(req,res)=>{
    productsControler.create(req,res);
 })
+.get("/:name", productsControler.getByName)
+
 
 module.exports = router;

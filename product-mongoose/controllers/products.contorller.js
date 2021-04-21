@@ -15,8 +15,6 @@ const createProduct = (req, res) => {
         if (err) return res.json({"error": err})
         return res.json({"success": product})
     });
-
-
 }
 
 const getProduct = (req, res) => {
@@ -25,7 +23,21 @@ const getProduct = (req, res) => {
     });
 }
 
+const getByName = (req, res) => {
+    const {name} = req.params;
+    productModel.findById(name, (err, res) => {
+        if(err){
+            return res.json({err})
+        }
+        if(!res){
+            return res.send("No product with this name")
+        }
+        res.json({res})
+  });
+}
+
 module.exports = {
     create: createProduct,
-    getAll: getProduct
+    getAll: getProduct,
+    getByName: getByName,
 }
