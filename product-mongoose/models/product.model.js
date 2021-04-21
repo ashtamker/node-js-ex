@@ -16,28 +16,40 @@ const productSchema = mongoose.Schema({
         unique: false,
         default : true
     },
-    details: [
-        { description: {
-            type: String,
+   details: {
+       description:{
+           type: String,
+           required: true,
+           unique: false,
+       },
+       price: {
+           type: Number,
+           required: true,
+           unique: false,
+           validate(value){
+               if(value < 0){
+                   throw new Error('Invalid Price')
+               }
+           }
+        },
+        phone: {
+            type: Number,
+            minlength: 10,
+            maxlength: 10,
+            required: true,
+        },
+        data: {
+            type: Date,
             required: false,
-            minLength:10,
-        }
-    },
-    {
-        price: { 
-         type: Number,
-         required: false,
-         validate(value)  {
-            if(value < 0){
-                throw new Error('Invalid price');
-            }
-         } 
-        }
-    }
-]
+            unique: false,
+            default: Date.now(),
+        },
+
+   },
+
 })
 
-const roommodel  = mongoose.model('product',productSchema);
-module.exports= roommodel;
+const productmodel  = mongoose.model('product', productSchema);
+module.exports= productmodel;
 // module.exports = mongoose.model('rooms',roomSchema);
 
