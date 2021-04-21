@@ -11,4 +11,10 @@ router.get('/',(req,res)=>{
 .get("/:name", productsControler.getByName)
 
 
+
+
+
+
 module.exports = router;
+
+
