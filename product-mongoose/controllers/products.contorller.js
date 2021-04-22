@@ -72,7 +72,36 @@ const getByNameAsync = async (req, res) => {
         catch (err) {
             res.send(err)
         }
+    };
+
+    const update = async (req, res) => {
+        const {id} = req.params
+        const {isActive} = req.body
+        try {
+            const product = await productModel.findByIdAndUpdate(id, {isActive})
+            if (!product) {
+                return res.status(404).send("Wrong id product")
+            }
+            res.send(product)
+        } 
+        catch (err) {
+            res.status(400).send(err)
+        }
     }
+    const deleteProduct = async (req, res) => {
+        const {id} = req.params
+        try {
+            const product = await productModel.findByIdAndDelete({id})
+            if (!product) {
+                res.status(404).send("Wrong id product")
+            }
+            res.send(product)
+        } 
+        catch (err) {
+            res.status(500).send()
+        }
+    }
+
 
 
 
@@ -83,6 +112,8 @@ module.exports = {
     createProductAsync,
     getProductAsync,
     getByNameAsync,
+    update,
+    deleteProduct,
 }
 
 

@@ -44,6 +44,11 @@ const productSchema = mongoose.Schema({
             unique: false,
             default: Date.now(),
         },
+        discount: { 
+            type: Number,
+            required: false, 
+            default: 0 
+        },
 
    },
 
